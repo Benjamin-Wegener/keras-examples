@@ -8,6 +8,16 @@ Image vision examples using machine learning, including
  
  All examples delivered as jupyter notebook and running on vanilla keras (with both plaidml/theano and tensorflow/google colab as backend).
 
+## pytorch versions (dlss5-distill architecture)
+
+The same three examples again, but with the compact generator of [dlss5-distill](https://github.com/Benjamin-Wegener/dlss5-distill) (RepVGG blocks fused to single 3x3 convolutions, parameter-free attention, bypass + residual) and trained from scratch with pytorch:
+
+ - [inpainting_dlss_distill.ipynb](inpainting_dlss_distill.ipynb)
+ - [superresolution_dlss_distill.ipynb](superresolution_dlss_distill.ipynb) (2x)
+ - [deblurring_dlss_distill.ipynb](deblurring_dlss_distill.ipynb)
+
+To watch long training runs: `python3 train_dashboard/server.py` serves a progress page on http://localhost:9000 (loss, psnr and all Set14 images, input | output | original, with a stop button per example) and `python3 train_dashboard/run_queue.py --max-hours 3` trains the three examples one after another. Results are written to `runs/`.
+
 ## results
 (1. degraded image, 2. neural net output, 3. ground truth)
 
