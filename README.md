@@ -16,8 +16,6 @@ The same three examples again, but with the compact generator of [dlss5-distill]
  - [superresolution_dlss_distill.ipynb](superresolution_dlss_distill.ipynb) (2x)
  - [deblurring_dlss_distill.ipynb](deblurring_dlss_distill.ipynb)
 
-To watch long training runs: `python3 train_dashboard/server.py` serves a progress page on http://localhost:9000 (loss, psnr and all Set14 images, input | output | original, with a stop button per example) and `python3 train_dashboard/run_queue.py --max-hours 3` trains the three examples one after another. Results are written to `runs/`.
-
 ## results
 (1. degraded image, 2. neural net output, 3. ground truth)
 
